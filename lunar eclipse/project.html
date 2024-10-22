@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunar Eclipse</title>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{ 
+      height: 100vh;
+      background-color: beige;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sky{
+      width: 45rem;
+      height: 35rem;
+      background-color: rgb(70, 213, 235);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: skychange 8s ease infinite;
+    }
+
+    @keyframes skychange{
+      0% {
+          background-color:rgb(70, 213, 235);
+        }
+        25% {
+          background-color: rgb(70, 213, 235);
+        }
+        50% {
+          background-color: black;
+        }
+        75% {
+          background-color: rgb(70, 213, 235);
+        }
+        100% {
+          background-color: rgb(70, 213, 235);
+        }
+    }
+
+    .sun{
+      width: 20rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: rgb(241, 135, 60);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sun::after{
+      position:absolute;
+      content: "";
+      width: 20rem;
+      aspect-ratio: 1;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background-color: black;
+      animation: sunmove 8s ease-in-out infinite;
+      
+    }
+
+    @keyframes sunmove{
+      0%{
+        transform: translate(100%);
+        scale: 1;
+      }
+      50%{
+        transform: translate(0%);
+        scale: 0.95;
+        box-shadow: rgba(255, 255, 255, 0.5) 0px 48px 100px 0px;
+      }
+      100%{
+        transform: translate(-100%);
+        scale: 0.9;
+
+      }
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="sky">
+    <div class="sun"></div>
+  </div>
+</body>
+</html>

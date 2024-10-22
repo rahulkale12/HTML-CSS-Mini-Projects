@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Reveal</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      height: 100vh;
+      background-color: black;
+      display: grid;
+      place-content: center;
+      
+    }
+
+    h1{
+      font-size: 100px;
+      color: white;
+      text-align: center;
+      text-shadow: 3px 10px 20px wheat;
+      position: relative;
+      
+
+      
+    }
+
+    h1:before{
+      position: absolute;
+      content: "RAHUL";
+      width: 100%;
+     
+      top: 0;
+      left: 0;
+      color: red;
+      border-right: 3px solid red;
+      overflow: hidden;
+      animation: reveal 2s linear infinite alternate;
+
+
+    }
+
+    @keyframes reveal{
+      0%{
+        width: 0;
+        
+      }
+      50%{
+        width: 50%;
+        
+
+      }
+      100%{
+        width: 100%;
+        
+      }
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <h1>RAHUL</h1>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Tilt</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      width: 100vw;
+      background-color:burlywood;
+      display: flex;
+      justify-content: center;
+      align-items: center ;
+
+    }
+
+    .button{
+      width: 30rem;
+      height: 10rem;
+      border: 5px solid red;
+      font-size: 70px;
+      font-weight: bold;
+      color: black;
+      border-radius: 10px;
+      padding: 30px 20px ;
+      text-transform: capitalize;
+      text-align: center;
+      background-color: transparent;
+    }
+
+    .button:hover{
+      color: white;
+      border-color: aqua;
+      background-color: black;
+      animation: shakeme 0.4s linear;
+    }
+
+    @keyframes shakeme{
+      0%{
+        rotate: 15deg;
+      }
+      50%{
+        rotate: -15deg;
+      }
+      100%{
+        rotate: 15deg;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <div class="button">Shake Me</div>
+</body>
+</html>

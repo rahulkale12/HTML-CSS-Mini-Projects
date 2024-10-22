@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousal</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center ;
+      background-color: black   ;
+
+      & .container{
+        width: 50vw;
+        height: 100vh;
+        background-color: azure;
+        background-image: url("./images/ganeshji.png");
+        border-radius: 20px;
+        background-size: 100% 100%;
+        animation: gallery 25s ease-in-out infinite;
+        
+      }
+    }
+
+    @keyframes gallery{
+      0%{
+        background-image: url("./images/hanumanji.png");
+      }
+      20%{
+        background-image: url("./images/krishnaji.png");
+      }
+      40%{
+        background-image: url("./images/mahadev.png");
+      }
+      60%{
+        background-image: url("./images/ramji.png");
+        }
+        80% {
+          background-image: url("./images/ganeshji.png");
+        }
+        100% {
+          background-image: url("./images/hanumanji.png");
+        }
+        
+      }
+  
+
+
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  
+</body>
+</html>
